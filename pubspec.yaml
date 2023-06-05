@@ -11,18 +11,17 @@ dependencies:
   flutter:
     sdk: flutter
   gesture_x_detector: ^1.0.0
-  helpers:
-     git:
-       url: https://github.com/ologunB/helpers.git
-       ref: main
+  helpers: ^1.2.3
   http: ^0.13.4
   path_provider: ^2.0.6
   provider: ^6.0.1
-  video_player:
-    path: ../video_player/video_player
   volume_watcher: ^2.0.1
   wakelock: ^0.6.1+2
   logger:
+  video_player:
+     git:
+       url: https://github.com/ologunB/video_player.git
+       ref: main
 
 dev_dependencies:
   flutter_test:
