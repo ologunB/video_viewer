@@ -99,12 +99,11 @@ packages:
   helpers:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: "273d46fc55c82d3d9f89fee01ccdfff6799ee04f"
-      url: "https://github.com/ologunB/helpers.git"
-    source: git
-    version: "1.2.0"
+      name: helpers
+      sha256: d82a48e5acd45e3650af20779cf61326dd9c1aaf729fdab4ae721dc48f28b840
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.3"
   html:
     dependency: transitive
     description:
@@ -337,26 +336,30 @@ packages:
   video_player:
     dependency: "direct main"
     description:
-      path: "../video_player/video_player"
-      relative: true
-    source: path
+      path: video_player
+      ref: main
+      resolved-ref: e879dd7bd29e5744dcbc1837256c47322c13ba36
+      url: "https://github.com/ologunB/video_player.git"
+    source: git
     version: "2.6.1"
   video_player_android:
     dependency: transitive
     description:
-      name: video_player_android
-      sha256: e7de6fabe5d96048cd8f4d710f25c3df84bb3cab8b22da6c082bd8f39e316984
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.3"
+      path: video_player_android
+      ref: main
+      resolved-ref: e879dd7bd29e5744dcbc1837256c47322c13ba36
+      url: "https://github.com/ologunB/video_player.git"
+    source: git
+    version: "2.4.8"
   video_player_avfoundation:
     dependency: transitive
     description:
-      name: video_player_avfoundation
-      sha256: "90468226c8687adf7b567d9bb42c25588783c4d30509af1fbd663b2dd049f700"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.2"
+      path: video_player_avfoundation
+      ref: main
+      resolved-ref: e879dd7bd29e5744dcbc1837256c47322c13ba36
+      url: "https://github.com/ologunB/video_player.git"
+    source: git
+    version: "2.4.6"
   video_player_platform_interface:
     dependency: transitive
     description:
@@ -368,11 +371,12 @@ packages:
   video_player_web:
     dependency: transitive
     description:
-      name: video_player_web
-      sha256: fb3bbeaf0302cb0c31340ebd6075487939aa1fe3b379d1a8784ef852b679940e
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.15"
+      path: video_player_web
+      ref: main
+      resolved-ref: e879dd7bd29e5744dcbc1837256c47322c13ba36
+      url: "https://github.com/ologunB/video_player.git"
+    source: git
+    version: "2.0.16"
   volume_watcher:
     dependency: "direct main"
     description:

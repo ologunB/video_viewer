@@ -22,6 +22,8 @@ dependencies:
      git:
        url: https://github.com/ologunB/video_player.git
        ref: main
+       path: video_player
+
 
 dev_dependencies:
   flutter_test:
