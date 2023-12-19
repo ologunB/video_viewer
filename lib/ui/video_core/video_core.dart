@@ -1,28 +1,26 @@
 import 'dart:async';
-import 'package:helpers/helpers.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'package:video_viewer/data/repositories/video.dart';
 import 'package:gesture_x_detector/gesture_x_detector.dart';
+import 'package:helpers/helpers.dart';
+import 'package:video_viewer/data/repositories/video.dart';
 import 'package:video_viewer/domain/bloc/controller.dart';
 import 'package:video_viewer/domain/entities/volume_control.dart';
+import 'package:video_viewer/ui/overlay/overlay.dart';
 import 'package:video_viewer/ui/overlay/widgets/background.dart';
 import 'package:video_viewer/ui/video_core/widgets/ad.dart';
-
+import 'package:video_viewer/ui/video_core/widgets/aspect_ratio.dart';
+import 'package:video_viewer/ui/video_core/widgets/buffering.dart';
+import 'package:video_viewer/ui/video_core/widgets/forward_and_rewind/bar.dart';
 import 'package:video_viewer/ui/video_core/widgets/forward_and_rewind/forward_and_rewind.dart';
 import 'package:video_viewer/ui/video_core/widgets/forward_and_rewind/layout.dart';
-import 'package:video_viewer/ui/video_core/widgets/forward_and_rewind/bar.dart';
-import 'package:video_viewer/ui/video_core/widgets/aspect_ratio.dart';
 import 'package:video_viewer/ui/video_core/widgets/orientation.dart';
-import 'package:video_viewer/ui/video_core/widgets/volume_bar.dart';
-import 'package:video_viewer/ui/video_core/widgets/thumbnail.dart';
-import 'package:video_viewer/ui/video_core/widgets/buffering.dart';
-import 'package:video_viewer/ui/video_core/widgets/subtitle.dart';
 import 'package:video_viewer/ui/video_core/widgets/player.dart';
+import 'package:video_viewer/ui/video_core/widgets/subtitle.dart';
+import 'package:video_viewer/ui/video_core/widgets/thumbnail.dart';
+import 'package:video_viewer/ui/video_core/widgets/volume_bar.dart';
 import 'package:video_viewer/ui/widgets/play_and_pause.dart';
 import 'package:video_viewer/ui/widgets/transitions.dart';
-import 'package:video_viewer/ui/overlay/overlay.dart';
-import 'package:volume_watcher/volume_watcher.dart';
 
 class VideoViewerCore extends StatefulWidget {
   const VideoViewerCore({Key? key}) : super(key: key);
@@ -75,7 +73,7 @@ class _VideoViewerCoreState extends State<VideoViewerCore> {
       _defaultForwardAmount = metadata.forwardAmount;
       switch (metadata.volumeManager) {
         case VideoViewerVolumeManager.device:
-          _maxVolume = await VolumeWatcher.getMaxVolume;
+          //       _maxVolume = await VolumeWatcher.getMaxVolume;
           break;
         case VideoViewerVolumeManager.video:
           _maxVolume = 1.0;
@@ -189,7 +187,7 @@ class _VideoViewerCoreState extends State<VideoViewerCore> {
     _currentVolume.value = volume;
     switch (_query.videoMetadata(context).volumeManager) {
       case VideoViewerVolumeManager.device:
-        await VolumeWatcher.setVolume(volume);
+        // await VolumeWatcher.setVolume(volume);
         break;
       case VideoViewerVolumeManager.video:
         await _query.video(context).video!.setVolume(volume);
